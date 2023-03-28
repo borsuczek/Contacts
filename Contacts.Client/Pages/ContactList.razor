@@ -1,0 +1,32 @@
+﻿@page "/"
+@inherits ContactListBase
+
+<h3>Lista kontaktów</h3>
+
+@if (Contacts == null)
+{
+    <p>Wczytywanie danych..</p>
+}
+else
+{
+    if (Logged == "authorized")
+    {
+        <button type="button" class="btn btn-primary" @onclick="LogOut">Wyloguj się</button>
+    }
+    else
+    {
+        <button type="button" class="btn btn-primary" @onclick="LogIn">Zaloguj się</button>
+    }
+    @foreach (var c in Contacts)
+    {
+        <p>
+            <a href="@($"details/{c.Email}")">@c.Name @c.Surname @c.Email</a>
+            @if (Logged == "authorized")
+            {
+                Contact = c;
+                <button type="button" class="btn btn-primary" @onclick="Edit">Edytuj</button>
+                <button type="button" class="btn btn-primary" @onclick="Delete">Usuń</button>
+            }
+        </p>
+    }
+}

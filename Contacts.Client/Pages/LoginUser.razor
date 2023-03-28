@@ -1,0 +1,35 @@
+﻿@page "/login"
+@page "/login/error"
+@inherits LoginUserBase
+
+@*checking if a person is logged, if it is not letting a user log in*@
+@if (Logged != "authorized")
+{
+    <h3>Logowanie</h3>
+
+    @if (!@ok)
+    {
+        <h4>Logowanie nie powiodło się, spróbuj ponownie</h4>
+    }
+
+    <EditForm Model="@LoginData" OnValidSubmit="Submit">
+        <DataAnnotationsValidator />
+        <p>
+            Login (email):
+            <InputText @bind-Value="@LoginData.Email" />
+            <ValidationMessage For="@(() => LoginData.Email)" />
+        </p>
+        <p>
+            Hasło:
+            <InputText type="password" @bind-Value="@LoginData.Password" />
+        </p>
+
+        <button type="submit" class="btn btn-primary">Zaloguj</button>
+    </EditForm>
+}
+else
+{
+    <p>Jesteś już zalogowany</p>
+}
+
+

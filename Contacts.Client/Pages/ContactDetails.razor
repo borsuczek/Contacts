@@ -1,0 +1,21 @@
+﻿@page "/details/{email}"
+@inherits ContactDetailsBase
+
+<h3>Szczegóły kontaktu</h3>
+
+@if (Contact.Name == null)
+{
+    <p>Ładowanie kontaktu...</p>
+}
+else
+{
+    <p>Imię: @Contact.Name</p>
+    <p>Nazwisko: @Contact.Surname</p>
+    <p>Email: @Contact.Email</p>
+    <p>Kategoria: @Contact.Category_type</p>
+    <p>Podkategoria: @Contact.Subcategory_name</p>
+    <p>Telefon: @Contact.Phone</p>
+    <p>Data urodzenia: @Contact.Birth_date.ToShortDateString()</p>
+
+    <a href="#">Powrót</a>
+}

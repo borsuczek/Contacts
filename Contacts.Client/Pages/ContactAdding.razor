@@ -1,0 +1,88 @@
+﻿@page "/add"
+@page "/add/error"
+@inherits ContactAddingBase
+
+@*checking if a person is logged, if it is not not letting a user add contact*@
+@if (Logged == "authorized")
+{
+
+    <h3>Dodaj kontakt</h3>
+
+    @if (!@ok)
+    {
+        <h4>Osoba o podanym loginie już istnieje, spróbuj ponownie</h4>
+    }
+
+    <EditForm Model="@Contact" OnValidSubmit="Submit">
+        <DataAnnotationsValidator />
+        <p>
+            Imię:
+            <InputText @bind-Value="@Contact.Name" />
+            <ValidationMessage For="@(() => Contact.Name)" />
+        </p>
+        <p>
+            Nazwisko:
+            <InputText @bind-Value="@Contact.Surname" />
+            <ValidationMessage For="@(() => Contact.Surname)" />
+        </p>
+        <p>
+            Login (email):
+            <InputText @bind-Value="@Contact.Email" />
+            <ValidationMessage For="@(() => Contact.Email)" />
+        </p>
+        <p>
+            Hasło:
+            <InputText @bind-Value="@Contact.Password" />
+            <ValidationMessage For="@(() => Contact.Password)" />
+        </p>
+        <p>
+            Kategoria:
+            <InputSelect @bind-Value="@Contact.Category_type" class="form-control">
+                @foreach (var category in CategoryList)
+                    {
+                    <option value="@category.type">@category.type</option>
+                    }
+            </InputSelect>
+            <ValidationMessage For="@(() => Contact.Category_type)" />
+        </p>
+        @if (@Contact.Category_type == "inny")
+        {
+            <p>
+                Podkategoria:
+                <InputText @bind-Value="@Contact.Subcategory_name" />
+            </p>
+        }
+        else if (@Contact.Category_type == "służbowy")
+        {
+            <p>
+                Podkategoria:
+                <InputSelect @bind-Value="@Contact.Subcategory_name" class="form-control">
+                    @foreach (var subcategory in SubcategoryList)
+                            {
+                        <option value="@subcategory.name">@subcategory.name</option>
+                            }
+                </InputSelect>
+                <ValidationMessage For="@(() => Contact.Subcategory_name)" />
+            </p>
+        }
+        else
+        {
+            Contact.Subcategory_name = SubcategoryList[0].name;
+        }
+        <p>
+            Telefon:
+            <InputText @bind-Value="@Contact.Phone" />
+            <ValidationMessage For="@(() => Contact.Phone)" />
+        </p>
+        <p>
+            Data urodzenia:
+            <InputDate @bind-Value="@Contact.Birth_date" />
+            <ValidationMessage For="@(() => Contact.Birth_date)" />
+        </p>
+        <button type="submit" class="btn btn-primary">Stwórz</button>
+    </EditForm>
+}
+else
+{
+    <p>Aby mieć dostęp do aktywności należy się zalogować</p>
+}
