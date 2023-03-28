@@ -1,0 +1,10 @@
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\bin\Debug\netstandard2.1\Contacts.Models.deps.json
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\bin\Debug\netstandard2.1\Contacts.Models.dll
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\bin\Debug\netstandard2.1\Contacts.Models.pdb
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.csproj.AssemblyReference.cache
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.AssemblyInfoInputs.cache
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.AssemblyInfo.cs
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.csproj.CoreCompileInputs.cache
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.dll
+C:\Users\meles\Desktop\informatyka\V sem\pracunga\ContactListApp\ContactListApp\Contacts.Models\obj\Debug\netstandard2.1\Contacts.Models.pdb

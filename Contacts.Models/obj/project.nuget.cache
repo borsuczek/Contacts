@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1/F+JP4erYr2ko33Ochi01ItcvsYWCf0qXuLIKsp4FdjVsLZWz80LvVC42s8GCUN7bzDj1x3DUB0/yUL3I1p7Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\meles\\Desktop\\informatyka\\V sem\\pracunga\\ContactListApp\\ContactListApp\\Contacts.Models\\Contacts.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\meles\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
